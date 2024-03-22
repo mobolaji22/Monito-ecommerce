@@ -145,7 +145,7 @@ select {
   gap: 1rem;
   overflow-x: scroll;
 }
-.thumbnail img{
+.thumbnail img {
   width: 100%;
 }
 .thumbnail::-webkit-scrollbar {
@@ -256,9 +256,8 @@ td {
   justify-content: center;
   margin: 1rem;
 }
-.tag-line2{
+.tag-line2 {
   display: none;
-
 }
 .dog-kennel > div > span {
   line-height: 3rem;
@@ -299,7 +298,12 @@ td {
 /* footer */
 
 footer {
-  background-color: #fceed5;
+  background: linear-gradient(
+    102.87deg,
+    #fceed5 6.43%,
+    #fceed5 78.33%,
+    #ffe7ba 104.24%
+  );
   border-radius: 10px;
   padding-top: 0.5rem;
 }
@@ -325,12 +329,13 @@ footer form span {
   background-color: var(--neutral-00);
   padding: 1rem;
   border-radius: var(--card-radius);
+  width: 55%;
 }
 
 footer input {
   border: solid 1px var(--neutral-40);
   color: var(--neutral-40);
-  /* width: 45rem; */
+  width: 100%;
   padding: var(--card-padding);
   border-radius: 10px;
 }
@@ -403,7 +408,7 @@ footer .container {
     font-family: "Poppins", sans-serif;
     font-size: 1.4rem;
     line-height: 1.8rem;
-    min-width: 475px;
+    min-width: 100%;
     margin: 0 auto;
   }
   .container {
@@ -420,7 +425,7 @@ footer .container {
     align-items: center;
     background-color: #00a7e7;
   }
-  
+
   .navbar {
     display: none;
   }
@@ -435,22 +440,23 @@ footer .container {
   .thumbnail img {
     width: 100%;
   }
-  .tag-line, .social-media{
+  .tag-line,
+  .social-media {
     display: none;
   }
-  .product-details{
+  .product-details {
     width: 100%;
   }
-  .quicklinks{
+  .quicklinks {
     width: 100%;
   }
-  .top{
+  .top {
     width: 100%;
   }
-  .button{
+  .button {
     width: 100%;
   }
-  .tag-line2{
+  .tag-line2 {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -461,28 +467,25 @@ footer .container {
     border-radius: 1rem;
     color: var(--primary);
     font-size: 1.4rem;
-    font-weight: 700 ;
+    font-weight: 700;
   }
-  .dog-kennel{
+  .dog-kennel {
     width: 100%;
   }
-  .dog-kennel > span > h3{
+  .dog-kennel > span > h3 {
     display: none;
   }
-  .kennel{
+  .kennel {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
   }
-  .dog{
+  .dog {
     width: 48%;
   }
 
   /* footer */
-  footer {
-    background-color: #fceed5;
-    border-radius: 10px;
-  }
+ 
   footer form {
     display: flex;
     flex-direction: column;
@@ -519,7 +522,7 @@ footer .container {
     color: var(--neutral-00);
     width: 100%;
   }
-  footer > div > span{
+  footer > div > span {
     display: flex;
     flex-direction: column;
   }

@@ -230,7 +230,12 @@ article p {
 }
 /* footer */
 footer {
-  background-color: #fceed5;
+  background: linear-gradient(
+    102.87deg,
+    #fceed5 6.43%,
+    #fceed5 78.33%,
+    #ffe7ba 104.24%
+  );
   border-radius: 10px;
 }
 footer form {
@@ -336,7 +341,7 @@ footer .form-btn {
     font-family: "Poppins", sans-serif;
     font-size: 1.2rem;
     line-height: 1.8rem;
-    min-width: 1024px;
+    min-width: 100%;
     margin: 0 auto;
   }
   .container {
@@ -373,6 +378,7 @@ footer .form-btn {
     border: none;
     border-radius: 20x;
     background-color: transparent;
+    outline: none;
   }
   .input img {
     transform: translateX(100%);
@@ -644,9 +650,6 @@ footer .form-btn {
     width: 33%;
   }
   /* footer */
-  footer .container {
-    padding: 0;
-  }
   form {
     display: flex;
     justify-content: space-between;
@@ -711,7 +714,7 @@ footer .form-btn {
     font-family: "Poppins", sans-serif;
     font-size: 1.2rem;
     line-height: 1.8rem;
-    min-width: 1280px;
+    min-width: 100%;
     margin: 0 auto;
   }
   .container {
