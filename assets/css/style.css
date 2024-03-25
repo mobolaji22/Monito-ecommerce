@@ -89,16 +89,19 @@ header {
   position: absolute;
   top: 18%;
   right: 46%;
+  z-index: -1;
 }
 #header-6 {
   position: absolute;
   top: 28%;
   right: 47%;
+  z-index: -1;
 }
 #header-7 {
   position: absolute;
   top: 29%;
   right: 47.5%;
+  z-index: -1;
 }
 nav {
   display: flex;
@@ -117,7 +120,9 @@ nav > span {
 .hero {
   color: var(--primary);
 }
-
+.hero-text{
+  z-index: 2;
+}
 .hero h1 {
   font-size: 4rem;
   line-height: 6rem;
@@ -138,6 +143,7 @@ nav > span {
 .hero-image {
   margin-bottom: -27px;
   width: 100%;
+  z-index: 2;
 }
 .btn {
   display: flex;
