@@ -127,12 +127,25 @@ select {
   padding: 0 4rem;
   border-radius: var(--card-padding);
   margin-bottom: 3rem;
+  position: relative;
+  overflow: clip;
+}
+.body-banner > img {
+  z-index: 2;
+}
+#banner-1 {
+  position: absolute;
+  bottom: -5rem;
+  right: -5rem;
+  z-index: 1;
 }
 .body-banner-content {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   gap: 2rem;
+  z-index: 2;
+  margin-right: 2rem;
 }
 .body-banner-text {
   text-align: end;
@@ -155,28 +168,30 @@ select {
   display: flex;
   gap: 1rem;
 }
-.body-banner-button span img{
+.body-banner-button span img {
   width: 15px;
 }
 .btn-primary {
-  color: var(--neutral-10);
-  border: var(--btn-border);
-  border-radius: var(--btn-radius);
-  padding: var(--btn-padding);
-  cursor: pointer;
-  text-decoration: none;
-  background-color: var(--primary);
-}
-.btn-secondary {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
   color: var(--primary);
   border: var(--btn-border);
   border-radius: var(--btn-radius);
   padding: var(--btn-padding);
   cursor: pointer;
   text-decoration: none;
+  background-color: var(--neutral-00);
+  white-space: nowrap;
+}
+.btn-secondary {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--neutral-00);
+  border: var(--btn-border);
+  border-radius: var(--btn-radius);
+  padding: var(--btn-padding);
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
 }
 main {
   display: flex;
@@ -226,11 +241,12 @@ aside {
 }
 .title-content h6 {
   color: var(--neutral-60);
+  font-size: 1.2rem;
 }
 .sort {
   width: 13rem;
 }
-.filter{
+.filter {
   display: none;
 }
 .kennel {
@@ -273,7 +289,6 @@ aside {
   align-items: center;
   gap: 2.5rem;
 }
-
 .pagination a {
   color: var(--primary);
   font-weight: 700;
@@ -392,21 +407,21 @@ footer hr {
 /* 2xl */
 @media (max-width: 1536px) {
   .container {
-    max-width: 1280px;
+    max-width: 90%;
   }
 }
 
 /* xl */
 @media (max-width: 1280px) {
   .container {
-    max-width: 1024px;
+    max-width: 90%;
   }
 }
 
 /* lg */
 @media (max-width: 1024px) {
   .container {
-    max-width: 768px;
+    max-width: 90%;
   }
   .navbar {
     display: none;
@@ -431,12 +446,6 @@ footer hr {
     display: flex;
     flex-direction: column-reverse;
     padding: 3rem 1rem 0;
-    border-radius: var(--card-padding);
-    margin-bottom: 3rem;
-    background-image: url("/assets/images/Rectangle\ 1.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: top center;
   }
   .body-banner img {
     width: 100%;
@@ -469,7 +478,7 @@ footer hr {
   .body-banner-button {
     width: 100%;
   }
-  .body-banner-button span{
+  .body-banner-button span {
     display: flex;
     justify-content: center;
   }
@@ -512,18 +521,17 @@ footer hr {
     align-items: flex-start;
     gap: 2rem;
   }
-  .filter{
+  .filter {
     display: block;
     font-size: 1.3rem;
   }
-  .option{
+  .option {
     display: flex;
     align-items: baseline;
-    
   }
-  .filter span{
+  .filter span {
     display: flex;
-    gap: .5rem;
+    gap: 0.5rem;
   }
 
   .kennel {
@@ -628,7 +636,7 @@ footer hr {
 /* md */
 @media (max-width: 768px) {
   .container {
-    max-width: 640px;
+    max-width: 90%;
   }
   .navbar {
     display: none;
@@ -687,7 +695,7 @@ footer hr {
   .body-banner-button {
     width: 100%;
   }
-  .body-banner-button span{
+  .body-banner-button span {
     display: flex;
     justify-content: center;
   }
@@ -730,18 +738,17 @@ footer hr {
     align-items: flex-start;
     gap: 2rem;
   }
-  .filter{
+  .filter {
     display: block;
     font-size: 1.3rem;
   }
-  .option{
+  .option {
     display: flex;
     align-items: baseline;
-    
   }
-  .filter span{
+  .filter span {
     display: flex;
-    gap: .5rem;
+    gap: 0.5rem;
   }
 
   .kennel {
@@ -846,7 +853,7 @@ footer hr {
 /* sm */
 @media (max-width: 640px) {
   .container {
-    max-width: 475px;
+    max-width: 90%;
   }
 }
 
@@ -913,7 +920,7 @@ footer hr {
   .body-banner-button {
     width: 100%;
   }
-  .body-banner-button span{
+  .body-banner-button span {
     display: flex;
     justify-content: center;
   }
@@ -956,18 +963,17 @@ footer hr {
     align-items: flex-start;
     gap: 2rem;
   }
-  .filter{
+  .filter {
     display: block;
     font-size: 1.3rem;
   }
-  .option{
+  .option {
     display: flex;
     align-items: baseline;
-    
   }
-  .filter span{
+  .filter span {
     display: flex;
-    gap: .5rem;
+    gap: 0.5rem;
   }
 
   .kennel {
@@ -1026,6 +1032,7 @@ footer hr {
   .footer-nav ul {
     display: flex;
     list-style: none;
+    gap: 1rem;
     justify-content: space-between;
     font-size: 1.4rem;
     width: 100%;
@@ -1066,5 +1073,10 @@ footer hr {
     color: var(--neutral-60);
     text-decoration: none;
     font-size: 1.2rem;
+  }
+}
+@media (max-width: 350px){
+  .dog{
+    width: 100%;
   }
 }

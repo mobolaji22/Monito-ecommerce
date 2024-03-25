@@ -45,7 +45,60 @@ body {
 }
 header {
   border-radius: 10px;
-  background-color: #fceed5;
+  background: linear-gradient(
+    102.87deg,
+    #fceed5 6.43%,
+    #fceed5 78.33%,
+    #ffe7ba 104.24%
+  );
+  position: relative;
+  z-index: 1;
+  overflow: clip;
+}
+#header-9 {
+  position: absolute;
+  top: -2rem;
+  left: -6rem;
+  z-index: -1;
+}
+#header-3 {
+  position: absolute;
+  top: 12.5rem;
+  left: 7.1rem;
+  z-index: -1;
+}
+#header-8 {
+  position: absolute;
+  bottom: -0.5rem;
+  left: -9rem;
+  z-index: -1;
+}
+#header-1 {
+  position: absolute;
+  bottom: -0.9rem;
+  right: 4rem;
+  z-index: -2;
+}
+#header-2 {
+  position: absolute;
+  bottom: -0.7rem;
+  right: -5rem;
+  z-index: -1;
+}
+#header-5 {
+  position: absolute;
+  top: 18%;
+  right: 46%;
+}
+#header-6 {
+  position: absolute;
+  top: 28%;
+  right: 47%;
+}
+#header-7 {
+  position: absolute;
+  top: 29%;
+  right: 47.5%;
 }
 nav {
   display: flex;
@@ -162,17 +215,35 @@ section h2 {
   display: none;
 }
 .banner {
-  background-color: #fceed5;
+  background-color: #134970;
   padding: 30px 20px 0;
   border-radius: 20px;
   text-align: center;
+  position: relative;
+  z-index: 1;
+  overflow: clip;
+}
+#banner-1 {
+  position: absolute;
+  bottom: -15rem;
+  left: -10rem;
+  transform: rotateZ(20deg);
+  z-index: -1;
+}
+#banner-9 {
+  position: absolute;
+  top: 0rem;
+  right: -7rem;
+  z-index: -1;
+}
+.banner-text {
+  margin-top: -3rem;
 }
 .banner h1 {
   font-size: 4rem;
   line-height: 6rem;
   color: var(--primary);
 }
-
 .banner h2 {
   font-size: 2.25rem;
   color: var(--primary);
@@ -187,7 +258,9 @@ section h2 {
 }
 .banner-image {
   width: 100%;
-  margin-bottom: -5px;
+  /* margin-bottom: -5px; */
+  margin: 0 0 -0.5rem -2rem;
+  z-index: 2;
 }
 .our-products {
   display: none;
@@ -239,6 +312,9 @@ footer {
   border-radius: 10px;
 }
 footer form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: var(--primary);
   padding: 1rem;
   border-radius: var(--card-radius);
@@ -253,6 +329,7 @@ footer form h3 {
 footer form span {
   display: flex;
   flex-direction: column;
+  width: 100%;
   gap: 1rem;
   background-color: var(--neutral-00);
   padding: 1rem;
@@ -322,7 +399,7 @@ footer .form-btn {
 /* sm */
 @media (min-width: 640px) {
   .container {
-    max-width: 640px;
+    max-width: 100%;
     margin: 0 auto;
   }
 }
@@ -330,7 +407,7 @@ footer .form-btn {
 /* md */
 @media (min-width: 768px) {
   .container {
-    max-width: 768px;
+    max-width: 90%;
     margin: 0 auto;
   }
 }
@@ -355,7 +432,6 @@ footer .form-btn {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* width: 100%; */
   }
   .navbar span {
     display: flex;
@@ -504,9 +580,22 @@ footer .form-btn {
     justify-content: space-between;
     align-items: center;
   }
+  #banner-1 {
+    position: absolute;
+    bottom: -17rem;
+    left: -13rem;
+    transform: rotateZ(20deg);
+    z-index: -1;
+  }
+  #banner-9 {
+    position: absolute;
+    top: 0rem;
+    right: -7rem;
+    z-index: -1;
+  }
   .banner-image {
-    width: 100%;
-    margin-bottom: 0;
+    width: 50%;
+    margin-bottom: -1rem;
   }
   .banner-text {
     text-align: end;
@@ -611,10 +700,25 @@ footer .form-btn {
     background-color: #ffb775;
     border-radius: var(--card-radius);
     margin-top: 2rem;
+    overflow: clip;
+    position: relative;
+  }
+  #adoption-1 {
+    position: absolute;
+    bottom: -2rem;
+    right: 0rem;
+    z-index: 1;
+  }
+  #adoption-9 {
+    position: absolute;
+    top: 0rem;
+    left: -7rem;
+    z-index: 1;
   }
   .adoption-text {
-    padding-left: 3rem;
+    margin-left: 7rem;
     width: 40%;
+    z-index: 2;
   }
   .adoption-text h1 {
     font-size: 4rem;
@@ -652,21 +756,24 @@ footer .form-btn {
   /* footer */
   form {
     display: flex;
+    flex-direction: row !important;
     justify-content: space-between;
     align-items: center;
   }
   form h3 {
-    font-size: 2rem;
+    font-size: 2rem !important;
     line-height: 3rem;
+    width: 39%;
   }
   footer form span {
     display: flex;
     flex-direction: row;
+    width: 60%;
   }
   footer input {
     border: solid 1px var(--neutral-40);
     color: var(--neutral-40);
-    width: 45rem;
+    width: 100%;
   }
   footer .form-btn {
     width: 13rem;
