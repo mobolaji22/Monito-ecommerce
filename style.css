@@ -86,22 +86,13 @@ header {
   z-index: -1;
 }
 #header-5 {
-  position: absolute;
-  top: 18%;
-  right: 46%;
-  z-index: -1;
+  display: none;
 }
 #header-6 {
-  position: absolute;
-  top: 28%;
-  right: 47%;
-  z-index: -1;
+  display: none;
 }
 #header-7 {
-  position: absolute;
-  top: 29%;
-  right: 47.5%;
-  z-index: -1;
+  display: none;
 }
 nav {
   display: flex;
@@ -120,7 +111,7 @@ nav > span {
 .hero {
   color: var(--primary);
 }
-.hero-text{
+.hero-text {
   z-index: 2;
 }
 .hero h1 {
@@ -399,6 +390,27 @@ footer .form-btn {
   .container {
     max-width: 475px;
     margin: 0 auto;
+  }
+  #header-5 {
+    display: block;
+    position: absolute;
+    top: 18%;
+    right: 46%;
+    z-index: -1;
+  }
+  #header-6 {
+    display: block;
+    position: absolute;
+    top: 28%;
+    right: 47%;
+    z-index: -1;
+  }
+  #header-7 {
+    display: block;
+    position: absolute;
+    top: 29%;
+    right: 47.5%;
+    z-index: -1;
   }
 }
 
